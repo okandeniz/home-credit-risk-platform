@@ -1,0 +1,39 @@
+# Data
+numpy
+pandas
+scipy
+
+# Database
+sqlalchemy
+pyodbc
+python-dotenv
+
+# Visualization
+matplotlib
+plotly
+
+# Machine Learning
+scikit-learn
+imbalanced-learn
+xgboost
+lightgbm
+catboost
+optuna
+shap
+joblib
+
+# Notebook
+jupyterlab
+ipykernel
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+
+# Web App
+streamlit
+
+# Testing and Code Quality
+pytest
+ruff
