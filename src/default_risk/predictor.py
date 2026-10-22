@@ -8,6 +8,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
+from functools import lru_cache
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -17,6 +18,8 @@ MODEL_PATH = (
     / "default_risk_lgbm_retrained.joblib"
 )
 
+class ApplicantNotFoundError(Exception):
+    pass
 
 def create_db_engine():
     load_dotenv(PROJECT_ROOT / ".env")
@@ -39,9 +42,51 @@ def create_db_engine():
 
     return create_engine(connection_url)
 
+# Thanks to @lru_cache(maxsize=1), the trained model will be loaded upon the first call within the same Python process,
+# and the version already in memory will be used for subsequent calls.
+
+@lru_cache(maxsize=1)
+def load_model_artifact():
+    return joblib.load(MODEL_PATH)
+
+def predict_from_features(feature_values: dict):
+    artifact = load_model_artifact()
+
+    features = artifact["features"]
+    threshold = artifact["threshold"]
+    pipeline = artifact["pipeline"]
+
+    # Validate required features
+    missing_features = [
+        feature
+        for feature in features
+        if feature not in feature_values
+    ]
+
+    if missing_features:
+        raise ValueError(
+            f"Missing model features: {missing_features}"
+        )
+
+    # Preserve the trained feature order
+    X = pd.DataFrame(
+        [{feature: feature_values[feature] for feature in features}],
+        columns=features,
+    )
+
+    probability = float(
+        pipeline.predict_proba(X)[0, 1]
+    )
+
+    return {
+        "risk_probability": probability,
+        "risk_flag": int(probability >= threshold),
+        "threshold": threshold,
+        "model_version": artifact["model_version"],
+    }
 
 def predict_applicant(applicant_id):
-    artifact = joblib.load(MODEL_PATH)
+    artifact = load_model_artifact()
 
     pipeline = artifact["pipeline"]
     features = artifact["features"]
@@ -66,7 +111,7 @@ def predict_applicant(applicant_id):
         engine.dispose()
 
     if applicant.empty:
-        raise ValueError(
+        raise ApplicantNotFoundError(
             f"Applicant {applicant_id} was not found."
         )
 
@@ -88,20 +133,14 @@ def predict_applicant(applicant_id):
 
     X = applicant[features].copy()
 
-    # Predict payment difficulty probability
-    probability = float(
-        pipeline.predict_proba(X)[0, 1]
+    prediction = predict_from_features(
+        applicant.iloc[0].to_dict()
     )
 
-    risk_flag = int(probability >= threshold)
-
     return {
-        "applicant_id": applicant_id,
-        "dataset_type": applicant["DATASET_TYPE"].iloc[0],
-        "risk_probability": probability,
-        "risk_flag": risk_flag,
-        "threshold": threshold,
-        "model_version": artifact["model_version"],
+        "applicant_id": int(applicant_id),
+        "dataset_type": str(applicant["DATASET_TYPE"].iloc[0]),
+        **prediction,
     }
 
 

@@ -1,4 +1,4 @@
-# Python
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *.pyo
@@ -8,47 +8,49 @@ __pycache__/
 .venv/
 venv/
 
-# Local configuration and credentials
+# Local configuration, tokens, and credentials
 .env
 .env.*
 !.env.example
+.streamlit/secrets.toml
 
-# Jupyter / IDE / tooling
+# Notebooks, editors, tests, and linters
 .ipynb_checkpoints/
 .vscode/
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
 .coverage
 htmlcov/
 
-# Raw, intermediate, and generated data
+# Local datasets and prediction exports
+# The source Kaggle data is downloaded separately.
 data/raw/*
 data/interim/*
 data/processed/*
 data/predictions/*
 
-# Preserve folder placeholders
+# Keep intentional directory placeholders
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 !data/predictions/.gitkeep
 
-# Preserve the original development split used for reproducible training
+# Reproducible development split used by train.py
 !data/processed/default_risk_development_ids.csv
 
-# Trained model artifacts (not committed by default)
+# Trained model artifacts are generated locally
 models/*
 !models/.gitkeep
 
-# Logs
+# Runtime logs and temporary files
 *.log
 logs/
-
-# Power BI report: add final PBIX at project completion
-powerbi/*.pbix
-
-# OS / temporary files
-.DS_Store
-Thumbs.db
 *.tmp
 *.temp
+.DS_Store
+Thumbs.db
+
+# Power BI: final .pbix report IS intentionally tracked.
+# Ignore temporary/lock files, not the .pbix itself.
+~$*.pbix
