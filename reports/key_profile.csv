@@ -1,0 +1,8 @@
+file_name,key_columns,row_count,unique_key_count,duplicate_key_count,null_key_count,is_unique
+application_train.csv,SK_ID_CURR,307511,307511,0,0,True
+application_test.csv,SK_ID_CURR,48744,48744,0,0,True
+bureau.csv,SK_ID_BUREAU,1716428,1716428,0,0,True
+bureau_balance.csv,SK_ID_BUREAU + MONTHS_BALANCE,27299925,27299925,0,0,True
+previous_application.csv,SK_ID_PREV,1670214,1670214,0,0,True
+POS_CASH_balance.csv,SK_ID_PREV + MONTHS_BALANCE,10001358,10001358,0,0,True
+credit_card_balance.csv,SK_ID_PREV + MONTHS_BALANCE,3840312,3840312,0,0,True

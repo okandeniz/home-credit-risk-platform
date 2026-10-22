@@ -1,0 +1,340 @@
+table_name,column_name,pandas_dtype,sql_type,reason,null_pct,min_value,max_value,max_text_length
+application_train,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100002.0,456255.0,0
+application_train,TARGET,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,NAME_CONTRACT_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,15
+application_train,CODE_GENDER,str,VARCHAR(10),Categorical or text column,0.0,,,3
+application_train,FLAG_OWN_CAR,str,VARCHAR(10),Categorical or text column,0.0,,,1
+application_train,FLAG_OWN_REALTY,str,VARCHAR(10),Categorical or text column,0.0,,,1
+application_train,CNT_CHILDREN,int64,INT,Integer source column,0.0,0.0,19.0,0
+application_train,AMT_INCOME_TOTAL,float64,"DECIMAL(19,3)",Monetary amount,0.0,25650.0,117000000.0,0
+application_train,AMT_CREDIT,float64,"DECIMAL(19,3)",Monetary amount,0.0,45000.0,4050000.0,0
+application_train,AMT_ANNUITY,float64,"DECIMAL(19,3)",Monetary amount,0.0,1615.5,258025.5,0
+application_train,AMT_GOODS_PRICE,float64,"DECIMAL(19,3)",Monetary amount,0.09,40500.0,4050000.0,0
+application_train,NAME_TYPE_SUITE,str,VARCHAR(20),Categorical or text column,0.42,,,15
+application_train,NAME_INCOME_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,20
+application_train,NAME_EDUCATION_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,29
+application_train,NAME_FAMILY_STATUS,str,VARCHAR(20),Categorical or text column,0.0,,,20
+application_train,NAME_HOUSING_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,19
+application_train,REGION_POPULATION_RELATIVE,float64,FLOAT,Continuous numeric value,0.0,0.00029,0.072508,0
+application_train,DAYS_BIRTH,int64,INT,Integer source column,0.0,-25229.0,-7489.0,0
+application_train,DAYS_EMPLOYED,int64,INT,Integer source column,0.0,-17912.0,365243.0,0
+application_train,DAYS_REGISTRATION,float64,FLOAT,Continuous numeric value,0.0,-24672.0,0.0,0
+application_train,DAYS_ID_PUBLISH,int64,INT,Integer source column,0.0,-7197.0,0.0,0
+application_train,OWN_CAR_AGE,float64,FLOAT,Continuous numeric value,65.99,0.0,91.0,0
+application_train,FLAG_MOBIL,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_EMP_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_WORK_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_CONT_MOBILE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_EMAIL,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,OCCUPATION_TYPE,str,VARCHAR(50),Categorical or text column,31.35,,,21
+application_train,CNT_FAM_MEMBERS,float64,FLOAT,Continuous numeric value,0.0,1.0,20.0,0
+application_train,REGION_RATING_CLIENT,int64,INT,Integer source column,0.0,1.0,3.0,0
+application_train,REGION_RATING_CLIENT_W_CITY,int64,INT,Integer source column,0.0,1.0,3.0,0
+application_train,WEEKDAY_APPR_PROCESS_START,str,VARCHAR(10),Categorical or text column,0.0,,,9
+application_train,HOUR_APPR_PROCESS_START,int64,INT,Integer source column,0.0,0.0,23.0,0
+application_train,REG_REGION_NOT_LIVE_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,REG_REGION_NOT_WORK_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,LIVE_REGION_NOT_WORK_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,REG_CITY_NOT_LIVE_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,REG_CITY_NOT_WORK_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,LIVE_CITY_NOT_WORK_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_train,ORGANIZATION_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,22
+application_train,EXT_SOURCE_1,float64,FLOAT,Continuous numeric value,56.38,0.0145681324124455,0.962692770561306,0
+application_train,EXT_SOURCE_2,float64,FLOAT,Continuous numeric value,0.21,8.173616518884397e-08,0.8549996664047012,0
+application_train,EXT_SOURCE_3,float64,FLOAT,Continuous numeric value,19.83,0.0005272652387098,0.8960095494948396,0
+application_train,APARTMENTS_AVG,float64,FLOAT,Continuous numeric value,50.75,0.0,1.0,0
+application_train,BASEMENTAREA_AVG,float64,FLOAT,Continuous numeric value,58.52,0.0,1.0,0
+application_train,YEARS_BEGINEXPLUATATION_AVG,float64,FLOAT,Continuous numeric value,48.78,0.0,1.0,0
+application_train,YEARS_BUILD_AVG,float64,FLOAT,Continuous numeric value,66.5,0.0,1.0,0
+application_train,COMMONAREA_AVG,float64,FLOAT,Continuous numeric value,69.87,0.0,1.0,0
+application_train,ELEVATORS_AVG,float64,FLOAT,Continuous numeric value,53.3,0.0,1.0,0
+application_train,ENTRANCES_AVG,float64,FLOAT,Continuous numeric value,50.35,0.0,1.0,0
+application_train,FLOORSMAX_AVG,float64,FLOAT,Continuous numeric value,49.76,0.0,1.0,0
+application_train,FLOORSMIN_AVG,float64,FLOAT,Continuous numeric value,67.85,0.0,1.0,0
+application_train,LANDAREA_AVG,float64,FLOAT,Continuous numeric value,59.38,0.0,1.0,0
+application_train,LIVINGAPARTMENTS_AVG,float64,FLOAT,Continuous numeric value,68.35,0.0,1.0,0
+application_train,LIVINGAREA_AVG,float64,FLOAT,Continuous numeric value,50.19,0.0,1.0,0
+application_train,NONLIVINGAPARTMENTS_AVG,float64,FLOAT,Continuous numeric value,69.43,0.0,1.0,0
+application_train,NONLIVINGAREA_AVG,float64,FLOAT,Continuous numeric value,55.18,0.0,1.0,0
+application_train,APARTMENTS_MODE,float64,FLOAT,Continuous numeric value,50.75,0.0,1.0,0
+application_train,BASEMENTAREA_MODE,float64,FLOAT,Continuous numeric value,58.52,0.0,1.0,0
+application_train,YEARS_BEGINEXPLUATATION_MODE,float64,FLOAT,Continuous numeric value,48.78,0.0,1.0,0
+application_train,YEARS_BUILD_MODE,float64,FLOAT,Continuous numeric value,66.5,0.0,1.0,0
+application_train,COMMONAREA_MODE,float64,FLOAT,Continuous numeric value,69.87,0.0,1.0,0
+application_train,ELEVATORS_MODE,float64,FLOAT,Continuous numeric value,53.3,0.0,1.0,0
+application_train,ENTRANCES_MODE,float64,FLOAT,Continuous numeric value,50.35,0.0,1.0,0
+application_train,FLOORSMAX_MODE,float64,FLOAT,Continuous numeric value,49.76,0.0,1.0,0
+application_train,FLOORSMIN_MODE,float64,FLOAT,Continuous numeric value,67.85,0.0,1.0,0
+application_train,LANDAREA_MODE,float64,FLOAT,Continuous numeric value,59.38,0.0,1.0,0
+application_train,LIVINGAPARTMENTS_MODE,float64,FLOAT,Continuous numeric value,68.35,0.0,1.0,0
+application_train,LIVINGAREA_MODE,float64,FLOAT,Continuous numeric value,50.19,0.0,1.0,0
+application_train,NONLIVINGAPARTMENTS_MODE,float64,FLOAT,Continuous numeric value,69.43,0.0,1.0,0
+application_train,NONLIVINGAREA_MODE,float64,FLOAT,Continuous numeric value,55.18,0.0,1.0,0
+application_train,APARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,50.75,0.0,1.0,0
+application_train,BASEMENTAREA_MEDI,float64,FLOAT,Continuous numeric value,58.52,0.0,1.0,0
+application_train,YEARS_BEGINEXPLUATATION_MEDI,float64,FLOAT,Continuous numeric value,48.78,0.0,1.0,0
+application_train,YEARS_BUILD_MEDI,float64,FLOAT,Continuous numeric value,66.5,0.0,1.0,0
+application_train,COMMONAREA_MEDI,float64,FLOAT,Continuous numeric value,69.87,0.0,1.0,0
+application_train,ELEVATORS_MEDI,float64,FLOAT,Continuous numeric value,53.3,0.0,1.0,0
+application_train,ENTRANCES_MEDI,float64,FLOAT,Continuous numeric value,50.35,0.0,1.0,0
+application_train,FLOORSMAX_MEDI,float64,FLOAT,Continuous numeric value,49.76,0.0,1.0,0
+application_train,FLOORSMIN_MEDI,float64,FLOAT,Continuous numeric value,67.85,0.0,1.0,0
+application_train,LANDAREA_MEDI,float64,FLOAT,Continuous numeric value,59.38,0.0,1.0,0
+application_train,LIVINGAPARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,68.35,0.0,1.0,0
+application_train,LIVINGAREA_MEDI,float64,FLOAT,Continuous numeric value,50.19,0.0,1.0,0
+application_train,NONLIVINGAPARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,69.43,0.0,1.0,0
+application_train,NONLIVINGAREA_MEDI,float64,FLOAT,Continuous numeric value,55.18,0.0,1.0,0
+application_train,FONDKAPREMONT_MODE,str,VARCHAR(50),Categorical or text column,68.39,,,21
+application_train,HOUSETYPE_MODE,str,VARCHAR(20),Categorical or text column,50.18,,,16
+application_train,TOTALAREA_MODE,float64,FLOAT,Continuous numeric value,48.27,0.0,1.0,0
+application_train,WALLSMATERIAL_MODE,str,VARCHAR(20),Categorical or text column,50.84,,,12
+application_train,EMERGENCYSTATE_MODE,str,VARCHAR(10),Categorical or text column,47.4,,,3
+application_train,OBS_30_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.33,0.0,348.0,0
+application_train,DEF_30_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.33,0.0,34.0,0
+application_train,OBS_60_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.33,0.0,344.0,0
+application_train,DEF_60_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.33,0.0,24.0,0
+application_train,DAYS_LAST_PHONE_CHANGE,float64,FLOAT,Continuous numeric value,0.0,-4292.0,0.0,0
+application_train,FLAG_DOCUMENT_2,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_3,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_4,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_5,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_6,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_7,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_8,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_9,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_10,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_11,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_12,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_13,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_14,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_15,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_16,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_17,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_18,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_19,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_20,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,FLAG_DOCUMENT_21,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_HOUR,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,4.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_DAY,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,9.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_WEEK,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,8.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_MON,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,27.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_QRT,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,261.0,0
+application_train,AMT_REQ_CREDIT_BUREAU_YEAR,float64,FLOAT,Nullable count stored as float in source,13.5,0.0,25.0,0
+application_test,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100001.0,456250.0,0
+application_test,NAME_CONTRACT_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,15
+application_test,CODE_GENDER,str,VARCHAR(10),Categorical or text column,0.0,,,1
+application_test,FLAG_OWN_CAR,str,VARCHAR(10),Categorical or text column,0.0,,,1
+application_test,FLAG_OWN_REALTY,str,VARCHAR(10),Categorical or text column,0.0,,,1
+application_test,CNT_CHILDREN,int64,INT,Integer source column,0.0,0.0,20.0,0
+application_test,AMT_INCOME_TOTAL,float64,"DECIMAL(19,3)",Monetary amount,0.0,26941.5,4410000.0,0
+application_test,AMT_CREDIT,float64,"DECIMAL(19,3)",Monetary amount,0.0,45000.0,2245500.0,0
+application_test,AMT_ANNUITY,float64,"DECIMAL(19,3)",Monetary amount,0.05,2295.0,180576.0,0
+application_test,AMT_GOODS_PRICE,float64,"DECIMAL(19,3)",Monetary amount,0.0,45000.0,2245500.0,0
+application_test,NAME_TYPE_SUITE,str,VARCHAR(20),Categorical or text column,1.87,,,15
+application_test,NAME_INCOME_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,20
+application_test,NAME_EDUCATION_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,29
+application_test,NAME_FAMILY_STATUS,str,VARCHAR(20),Categorical or text column,0.0,,,20
+application_test,NAME_HOUSING_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,19
+application_test,REGION_POPULATION_RELATIVE,float64,FLOAT,Continuous numeric value,0.0,0.0002529999999999,0.072508,0
+application_test,DAYS_BIRTH,int64,INT,Integer source column,0.0,-25195.0,-7338.0,0
+application_test,DAYS_EMPLOYED,int64,INT,Integer source column,0.0,-17463.0,365243.0,0
+application_test,DAYS_REGISTRATION,float64,FLOAT,Continuous numeric value,0.0,-23722.0,0.0,0
+application_test,DAYS_ID_PUBLISH,int64,INT,Integer source column,0.0,-6348.0,0.0,0
+application_test,OWN_CAR_AGE,float64,FLOAT,Continuous numeric value,66.29,0.0,74.0,0
+application_test,FLAG_MOBIL,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_EMP_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_WORK_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_CONT_MOBILE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_PHONE,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_EMAIL,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,OCCUPATION_TYPE,str,VARCHAR(50),Categorical or text column,32.01,,,21
+application_test,CNT_FAM_MEMBERS,float64,FLOAT,Continuous numeric value,0.0,1.0,21.0,0
+application_test,REGION_RATING_CLIENT,int64,INT,Integer source column,0.0,1.0,3.0,0
+application_test,REGION_RATING_CLIENT_W_CITY,int64,INT,Integer source column,0.0,-1.0,3.0,0
+application_test,WEEKDAY_APPR_PROCESS_START,str,VARCHAR(10),Categorical or text column,0.0,,,9
+application_test,HOUR_APPR_PROCESS_START,int64,INT,Integer source column,0.0,0.0,23.0,0
+application_test,REG_REGION_NOT_LIVE_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,REG_REGION_NOT_WORK_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,LIVE_REGION_NOT_WORK_REGION,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,REG_CITY_NOT_LIVE_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,REG_CITY_NOT_WORK_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,LIVE_CITY_NOT_WORK_CITY,int64,INT,Integer source column,0.0,0.0,1.0,0
+application_test,ORGANIZATION_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,22
+application_test,EXT_SOURCE_1,float64,FLOAT,Continuous numeric value,42.12,0.0134579104986917,0.9391445326561508,0
+application_test,EXT_SOURCE_2,float64,FLOAT,Continuous numeric value,0.02,8.09785587553435e-06,0.8549996664047012,0
+application_test,EXT_SOURCE_3,float64,FLOAT,Continuous numeric value,17.78,0.0005272652387098,0.8825303127941461,0
+application_test,APARTMENTS_AVG,float64,FLOAT,Continuous numeric value,49.01,0.0,1.0,0
+application_test,BASEMENTAREA_AVG,float64,FLOAT,Continuous numeric value,56.71,0.0,1.0,0
+application_test,YEARS_BEGINEXPLUATATION_AVG,float64,FLOAT,Continuous numeric value,46.89,0.0,1.0,0
+application_test,YEARS_BUILD_AVG,float64,FLOAT,Continuous numeric value,65.28,0.0,1.0,0
+application_test,COMMONAREA_AVG,float64,FLOAT,Continuous numeric value,68.72,0.0,1.0,0
+application_test,ELEVATORS_AVG,float64,FLOAT,Continuous numeric value,51.68,0.0,1.0,0
+application_test,ENTRANCES_AVG,float64,FLOAT,Continuous numeric value,48.37,0.0,1.0,0
+application_test,FLOORSMAX_AVG,float64,FLOAT,Continuous numeric value,47.84,0.0,1.0,0
+application_test,FLOORSMIN_AVG,float64,FLOAT,Continuous numeric value,66.61,0.0,1.0,0
+application_test,LANDAREA_AVG,float64,FLOAT,Continuous numeric value,57.96,0.0,1.0,0
+application_test,LIVINGAPARTMENTS_AVG,float64,FLOAT,Continuous numeric value,67.25,0.0,1.0,0
+application_test,LIVINGAREA_AVG,float64,FLOAT,Continuous numeric value,48.32,0.0,1.0,0
+application_test,NONLIVINGAPARTMENTS_AVG,float64,FLOAT,Continuous numeric value,68.41,0.0,1.0,0
+application_test,NONLIVINGAREA_AVG,float64,FLOAT,Continuous numeric value,53.51,0.0,1.0,0
+application_test,APARTMENTS_MODE,float64,FLOAT,Continuous numeric value,49.01,0.0,1.0,0
+application_test,BASEMENTAREA_MODE,float64,FLOAT,Continuous numeric value,56.71,0.0,1.0,0
+application_test,YEARS_BEGINEXPLUATATION_MODE,float64,FLOAT,Continuous numeric value,46.89,0.0,1.0,0
+application_test,YEARS_BUILD_MODE,float64,FLOAT,Continuous numeric value,65.28,0.0,1.0,0
+application_test,COMMONAREA_MODE,float64,FLOAT,Continuous numeric value,68.72,0.0,1.0,0
+application_test,ELEVATORS_MODE,float64,FLOAT,Continuous numeric value,51.68,0.0,1.0,0
+application_test,ENTRANCES_MODE,float64,FLOAT,Continuous numeric value,48.37,0.0,1.0,0
+application_test,FLOORSMAX_MODE,float64,FLOAT,Continuous numeric value,47.84,0.0,1.0,0
+application_test,FLOORSMIN_MODE,float64,FLOAT,Continuous numeric value,66.61,0.0,1.0,0
+application_test,LANDAREA_MODE,float64,FLOAT,Continuous numeric value,57.96,0.0,1.0,0
+application_test,LIVINGAPARTMENTS_MODE,float64,FLOAT,Continuous numeric value,67.25,0.0,1.0,0
+application_test,LIVINGAREA_MODE,float64,FLOAT,Continuous numeric value,48.32,0.0,1.0,0
+application_test,NONLIVINGAPARTMENTS_MODE,float64,FLOAT,Continuous numeric value,68.41,0.0,1.0,0
+application_test,NONLIVINGAREA_MODE,float64,FLOAT,Continuous numeric value,53.51,0.0,1.0,0
+application_test,APARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,49.01,0.0,1.0,0
+application_test,BASEMENTAREA_MEDI,float64,FLOAT,Continuous numeric value,56.71,0.0,1.0,0
+application_test,YEARS_BEGINEXPLUATATION_MEDI,float64,FLOAT,Continuous numeric value,46.89,0.0,1.0,0
+application_test,YEARS_BUILD_MEDI,float64,FLOAT,Continuous numeric value,65.28,0.0,1.0,0
+application_test,COMMONAREA_MEDI,float64,FLOAT,Continuous numeric value,68.72,0.0,1.0,0
+application_test,ELEVATORS_MEDI,float64,FLOAT,Continuous numeric value,51.68,0.0,1.0,0
+application_test,ENTRANCES_MEDI,float64,FLOAT,Continuous numeric value,48.37,0.0,1.0,0
+application_test,FLOORSMAX_MEDI,float64,FLOAT,Continuous numeric value,47.84,0.0,1.0,0
+application_test,FLOORSMIN_MEDI,float64,FLOAT,Continuous numeric value,66.61,0.0,1.0,0
+application_test,LANDAREA_MEDI,float64,FLOAT,Continuous numeric value,57.96,0.0,1.0,0
+application_test,LIVINGAPARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,67.25,0.0,1.0,0
+application_test,LIVINGAREA_MEDI,float64,FLOAT,Continuous numeric value,48.32,0.0,1.0,0
+application_test,NONLIVINGAPARTMENTS_MEDI,float64,FLOAT,Continuous numeric value,68.41,0.0,1.0,0
+application_test,NONLIVINGAREA_MEDI,float64,FLOAT,Continuous numeric value,53.51,0.0,1.0,0
+application_test,FONDKAPREMONT_MODE,str,VARCHAR(50),Categorical or text column,67.28,,,21
+application_test,HOUSETYPE_MODE,str,VARCHAR(20),Categorical or text column,48.46,,,16
+application_test,TOTALAREA_MODE,float64,FLOAT,Continuous numeric value,46.41,0.0,1.0,0
+application_test,WALLSMATERIAL_MODE,str,VARCHAR(20),Categorical or text column,49.02,,,12
+application_test,EMERGENCYSTATE_MODE,str,VARCHAR(10),Categorical or text column,45.56,,,3
+application_test,OBS_30_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.06,0.0,354.0,0
+application_test,DEF_30_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.06,0.0,34.0,0
+application_test,OBS_60_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.06,0.0,351.0,0
+application_test,DEF_60_CNT_SOCIAL_CIRCLE,float64,FLOAT,Continuous numeric value,0.06,0.0,24.0,0
+application_test,DAYS_LAST_PHONE_CHANGE,float64,FLOAT,Continuous numeric value,0.0,-4361.0,0.0,0
+application_test,FLAG_DOCUMENT_2,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_3,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_4,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_5,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_6,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_7,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_8,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_9,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_10,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_11,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_12,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_13,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_14,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_15,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_16,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_17,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_18,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+application_test,FLAG_DOCUMENT_19,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_20,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,FLAG_DOCUMENT_21,int64,TINYINT,Integer binary flag or target,0.0,0.0,0.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_HOUR,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,2.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_DAY,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,2.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_WEEK,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,2.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_MON,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,6.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_QRT,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,7.0,0
+application_test,AMT_REQ_CREDIT_BUREAU_YEAR,float64,FLOAT,Nullable count stored as float in source,12.41,0.0,17.0,0
+bureau,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100001.0,456255.0,0
+bureau,SK_ID_BUREAU,int64,INT,Identifier within SQL Server INT range,0.0,5000000.0,6843457.0,0
+bureau,CREDIT_ACTIVE,str,VARCHAR(10),Categorical or text column,0.0,,,8
+bureau,CREDIT_CURRENCY,str,VARCHAR(10),Categorical or text column,0.0,,,10
+bureau,DAYS_CREDIT,int64,INT,Integer source column,0.0,-2922.0,0.0,0
+bureau,CREDIT_DAY_OVERDUE,int64,INT,Integer source column,0.0,0.0,2792.0,0
+bureau,DAYS_CREDIT_ENDDATE,float64,FLOAT,Continuous numeric value,6.15,-42060.0,31199.0,0
+bureau,DAYS_ENDDATE_FACT,float64,FLOAT,Continuous numeric value,36.92,-42023.0,0.0,0
+bureau,AMT_CREDIT_MAX_OVERDUE,float64,"DECIMAL(19,3)",Monetary amount,65.51,0.0,115987185.0,0
+bureau,CNT_CREDIT_PROLONG,int64,INT,Integer source column,0.0,0.0,9.0,0
+bureau,AMT_CREDIT_SUM,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,585000000.0,0
+bureau,AMT_CREDIT_SUM_DEBT,float64,"DECIMAL(19,3)",Monetary amount,15.01,-4705600.32,170100000.0,0
+bureau,AMT_CREDIT_SUM_LIMIT,float64,"DECIMAL(19,3)",Monetary amount,34.48,-586406.115,4705600.32,0
+bureau,AMT_CREDIT_SUM_OVERDUE,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,3756681.0,0
+bureau,CREDIT_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,44
+bureau,DAYS_CREDIT_UPDATE,int64,INT,Integer source column,0.0,-41947.0,372.0,0
+bureau,AMT_ANNUITY,float64,"DECIMAL(19,3)",Monetary amount,71.47,0.0,118453423.5,0
+bureau_balance,SK_ID_BUREAU,int64,INT,Identifier within SQL Server INT range,0.0,5001709.0,6842888.0,0
+bureau_balance,MONTHS_BALANCE,int64,INT,Integer source column,0.0,-96.0,0.0,0
+bureau_balance,STATUS,str,VARCHAR(10),Categorical or text column,0.0,,,1
+previous_application,SK_ID_PREV,int64,INT,Identifier within SQL Server INT range,0.0,1000001.0,2845382.0,0
+previous_application,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100001.0,456255.0,0
+previous_application,NAME_CONTRACT_TYPE,str,VARCHAR(20),Categorical or text column,0.0,,,15
+previous_application,AMT_ANNUITY,float64,"DECIMAL(19,3)",Monetary amount,22.29,0.0,418058.145,0
+previous_application,AMT_APPLICATION,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,6905160.0,0
+previous_application,AMT_CREDIT,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,6905160.0,0
+previous_application,AMT_DOWN_PAYMENT,float64,"DECIMAL(19,3)",Monetary amount,53.64,-0.9,3060045.0,0
+previous_application,AMT_GOODS_PRICE,float64,"DECIMAL(19,3)",Monetary amount,23.08,0.0,6905160.0,0
+previous_application,WEEKDAY_APPR_PROCESS_START,str,VARCHAR(10),Categorical or text column,0.0,,,9
+previous_application,HOUR_APPR_PROCESS_START,int64,INT,Integer source column,0.0,0.0,23.0,0
+previous_application,FLAG_LAST_APPL_PER_CONTRACT,str,VARCHAR(10),Categorical or text column,0.0,,,1
+previous_application,NFLAG_LAST_APPL_IN_DAY,int64,TINYINT,Integer binary flag or target,0.0,0.0,1.0,0
+previous_application,RATE_DOWN_PAYMENT,float64,FLOAT,Continuous numeric value,53.64,-1.4978763414307848e-05,1.0,0
+previous_application,RATE_INTEREST_PRIMARY,float64,FLOAT,Continuous numeric value,99.64,0.0347812535418791,1.0,0
+previous_application,RATE_INTEREST_PRIVILEGED,float64,FLOAT,Continuous numeric value,99.64,0.3731501057082452,1.0,0
+previous_application,NAME_CASH_LOAN_PURPOSE,str,VARCHAR(50),Categorical or text column,0.0,,,32
+previous_application,NAME_CONTRACT_STATUS,str,VARCHAR(20),Categorical or text column,0.0,,,12
+previous_application,DAYS_DECISION,int64,INT,Integer source column,0.0,-2922.0,-1.0,0
+previous_application,NAME_PAYMENT_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,41
+previous_application,CODE_REJECT_REASON,str,VARCHAR(10),Categorical or text column,0.0,,,6
+previous_application,NAME_TYPE_SUITE,str,VARCHAR(20),Categorical or text column,49.12,,,15
+previous_application,NAME_CLIENT_TYPE,str,VARCHAR(10),Categorical or text column,0.0,,,9
+previous_application,NAME_GOODS_CATEGORY,str,VARCHAR(50),Categorical or text column,0.0,,,24
+previous_application,NAME_PORTFOLIO,str,VARCHAR(10),Categorical or text column,0.0,,,5
+previous_application,NAME_PRODUCT_TYPE,str,VARCHAR(10),Categorical or text column,0.0,,,7
+previous_application,CHANNEL_TYPE,str,VARCHAR(50),Categorical or text column,0.0,,,26
+previous_application,SELLERPLACE_AREA,int64,INT,Integer source column,0.0,-1.0,4000000.0,0
+previous_application,NAME_SELLER_INDUSTRY,str,VARCHAR(20),Categorical or text column,0.0,,,20
+previous_application,CNT_PAYMENT,float64,FLOAT,Continuous numeric value,22.29,0.0,84.0,0
+previous_application,NAME_YIELD_GROUP,str,VARCHAR(10),Categorical or text column,0.0,,,10
+previous_application,PRODUCT_COMBINATION,str,VARCHAR(50),Categorical or text column,0.02,,,30
+previous_application,DAYS_FIRST_DRAWING,float64,FLOAT,Continuous numeric value,40.3,-2922.0,365243.0,0
+previous_application,DAYS_FIRST_DUE,float64,FLOAT,Continuous numeric value,40.3,-2892.0,365243.0,0
+previous_application,DAYS_LAST_DUE_1ST_VERSION,float64,FLOAT,Continuous numeric value,40.3,-2801.0,365243.0,0
+previous_application,DAYS_LAST_DUE,float64,FLOAT,Continuous numeric value,40.3,-2889.0,365243.0,0
+previous_application,DAYS_TERMINATION,float64,FLOAT,Continuous numeric value,40.3,-2874.0,365243.0,0
+previous_application,NFLAG_INSURED_ON_APPROVAL,float64,FLOAT,Continuous numeric value,40.3,0.0,1.0,0
+pos_cash_balance,SK_ID_PREV,int64,INT,Identifier within SQL Server INT range,0.0,1000001.0,2843499.0,0
+pos_cash_balance,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100001.0,456255.0,0
+pos_cash_balance,MONTHS_BALANCE,int64,INT,Integer source column,0.0,-96.0,-1.0,0
+pos_cash_balance,CNT_INSTALMENT,float64,FLOAT,Continuous numeric value,0.26,1.0,92.0,0
+pos_cash_balance,CNT_INSTALMENT_FUTURE,float64,FLOAT,Continuous numeric value,0.26,0.0,85.0,0
+pos_cash_balance,NAME_CONTRACT_STATUS,str,VARCHAR(50),Categorical or text column,0.0,,,21
+pos_cash_balance,SK_DPD,int64,INT,Integer source column,0.0,0.0,4231.0,0
+pos_cash_balance,SK_DPD_DEF,int64,INT,Integer source column,0.0,0.0,3595.0,0
+credit_card_balance,SK_ID_PREV,int64,INT,Identifier within SQL Server INT range,0.0,1000018.0,2843496.0,0
+credit_card_balance,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100006.0,456250.0,0
+credit_card_balance,MONTHS_BALANCE,int64,INT,Integer source column,0.0,-96.0,-1.0,0
+credit_card_balance,AMT_BALANCE,float64,"DECIMAL(19,3)",Monetary amount,0.0,-420250.185,1505902.185,0
+credit_card_balance,AMT_CREDIT_LIMIT_ACTUAL,int64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,1350000.0,0
+credit_card_balance,AMT_DRAWINGS_ATM_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,19.52,-6827.31,2115000.0,0
+credit_card_balance,AMT_DRAWINGS_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,0.0,-6211.62,2287098.315,0
+credit_card_balance,AMT_DRAWINGS_OTHER_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,19.52,0.0,1529847.0,0
+credit_card_balance,AMT_DRAWINGS_POS_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,19.52,0.0,2239274.16,0
+credit_card_balance,AMT_INST_MIN_REGULARITY,float64,"DECIMAL(19,3)",Monetary amount,7.95,0.0,202882.005,0
+credit_card_balance,AMT_PAYMENT_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,20.0,0.0,4289207.445,0
+credit_card_balance,AMT_PAYMENT_TOTAL_CURRENT,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,4278315.69,0
+credit_card_balance,AMT_RECEIVABLE_PRINCIPAL,float64,"DECIMAL(19,3)",Monetary amount,0.0,-423305.82,1472316.795,0
+credit_card_balance,AMT_RECIVABLE,float64,"DECIMAL(19,3)",Monetary amount,0.0,-420250.185,1493338.185,0
+credit_card_balance,AMT_TOTAL_RECEIVABLE,float64,"DECIMAL(19,3)",Monetary amount,0.0,-420250.185,1493338.185,0
+credit_card_balance,CNT_DRAWINGS_ATM_CURRENT,float64,FLOAT,Continuous numeric value,19.52,0.0,51.0,0
+credit_card_balance,CNT_DRAWINGS_CURRENT,int64,INT,Integer source column,0.0,0.0,165.0,0
+credit_card_balance,CNT_DRAWINGS_OTHER_CURRENT,float64,FLOAT,Continuous numeric value,19.52,0.0,12.0,0
+credit_card_balance,CNT_DRAWINGS_POS_CURRENT,float64,FLOAT,Continuous numeric value,19.52,0.0,165.0,0
+credit_card_balance,CNT_INSTALMENT_MATURE_CUM,float64,FLOAT,Continuous numeric value,7.95,0.0,120.0,0
+credit_card_balance,NAME_CONTRACT_STATUS,str,VARCHAR(20),Categorical or text column,0.0,,,13
+credit_card_balance,SK_DPD,int64,INT,Integer source column,0.0,0.0,3260.0,0
+credit_card_balance,SK_DPD_DEF,int64,INT,Integer source column,0.0,0.0,3260.0,0
+installments_payments,SK_ID_PREV,int64,INT,Identifier within SQL Server INT range,0.0,1000001.0,2843499.0,0
+installments_payments,SK_ID_CURR,int64,INT,Identifier within SQL Server INT range,0.0,100001.0,456255.0,0
+installments_payments,NUM_INSTALMENT_VERSION,float64,FLOAT,Continuous numeric value,0.0,0.0,178.0,0
+installments_payments,NUM_INSTALMENT_NUMBER,int64,INT,Integer source column,0.0,1.0,277.0,0
+installments_payments,DAYS_INSTALMENT,float64,FLOAT,Continuous numeric value,0.0,-2922.0,-1.0,0
+installments_payments,DAYS_ENTRY_PAYMENT,float64,FLOAT,Continuous numeric value,0.02,-4921.0,-1.0,0
+installments_payments,AMT_INSTALMENT,float64,"DECIMAL(19,3)",Monetary amount,0.0,0.0,3771487.845,0
+installments_payments,AMT_PAYMENT,float64,"DECIMAL(19,3)",Monetary amount,0.02,0.0,3771487.845,0

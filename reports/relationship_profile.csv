@@ -1,0 +1,7 @@
+relationship,parent,parent_key,child,child_key,child_row_count,null_fk_rows,orphan_row_count,orphan_id_count,orphan_row_rate_pct,referential_integrity_ok
+applications -> bureau,application_train.csv + application_test.csv,SK_ID_CURR,bureau.csv,SK_ID_CURR,1716428,0,0,0,0.0,True
+bureau -> bureau_balance,bureau.csv,SK_ID_BUREAU,bureau_balance.csv,SK_ID_BUREAU,27299925,0,3120184,43041,11.43,False
+applications -> previous_application,application_train.csv + application_test.csv,SK_ID_CURR,previous_application.csv,SK_ID_CURR,1670214,0,0,0,0.0,True
+previous_application -> POS_CASH,previous_application.csv,SK_ID_PREV,POS_CASH_balance.csv,SK_ID_PREV,10001358,0,340561,37422,3.41,False
+previous_application -> credit_card,previous_application.csv,SK_ID_PREV,credit_card_balance.csv,SK_ID_PREV,3840312,0,1082816,11372,28.2,False
+previous_application -> installments,previous_application.csv,SK_ID_PREV,installments_payments.csv,SK_ID_PREV,13605401,0,1250826,38847,9.19,False

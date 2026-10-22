@@ -4,42 +4,39 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 
-# Environment variables
+# Local configuration and credentials
 .env
+.env.*
+!.env.example
 
-# Jupyter
+# Jupyter / IDE / tooling
 .ipynb_checkpoints/
-
-# VS Code
 .vscode/
-
-# Pytest
 .pytest_cache/
-
-# Ruff
 .ruff_cache/
-
-# Coverage
 .coverage
 htmlcov/
 
-# Data
+# Raw, intermediate, and generated data
 data/raw/*
 data/interim/*
 data/processed/*
 data/predictions/*
 
-# Keep folders
+# Preserve folder placeholders
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 !data/predictions/.gitkeep
 
-# Models
+# Preserve the original development split used for reproducible training
+!data/processed/default_risk_development_ids.csv
+
+# Trained model artifacts (not committed by default)
 models/*
 !models/.gitkeep
 
@@ -47,13 +44,11 @@ models/*
 *.log
 logs/
 
-# Power BI
+# Power BI report: add final PBIX at project completion
 powerbi/*.pbix
 
-# OS files
+# OS / temporary files
 .DS_Store
 Thumbs.db
-
-# Temporary files
 *.tmp
 *.temp

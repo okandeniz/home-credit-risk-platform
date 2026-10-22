@@ -1,0 +1,4 @@
+column_name,row_count,null_count,pandas_dtype,min_value,max_value,max_text_length,has_fractional_values,null_pct,is_integer_like
+SK_ID_BUREAU,27299925,0,int64,5001709.0,6842888.0,0,False,0.0,True
+MONTHS_BALANCE,27299925,0,int64,-96.0,0.0,0,False,0.0,True
+STATUS,27299925,0,str,,,1,False,0.0,False

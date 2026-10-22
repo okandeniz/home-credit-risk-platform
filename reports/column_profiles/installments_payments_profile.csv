@@ -1,0 +1,9 @@
+column_name,row_count,null_count,pandas_dtype,min_value,max_value,max_text_length,has_fractional_values,null_pct,is_integer_like
+SK_ID_PREV,13605401,0,int64,1000001.0,2843499.0,0,False,0.0,True
+SK_ID_CURR,13605401,0,int64,100001.0,456255.0,0,False,0.0,True
+NUM_INSTALMENT_VERSION,13605401,0,float64,0.0,178.0,0,False,0.0,True
+NUM_INSTALMENT_NUMBER,13605401,0,int64,1.0,277.0,0,False,0.0,True
+DAYS_INSTALMENT,13605401,0,float64,-2922.0,-1.0,0,False,0.0,True
+DAYS_ENTRY_PAYMENT,13605401,2905,float64,-4921.0,-1.0,0,False,0.02,True
+AMT_INSTALMENT,13605401,0,float64,0.0,3771487.845,0,True,0.0,False
+AMT_PAYMENT,13605401,2905,float64,0.0,3771487.845,0,True,0.02,False

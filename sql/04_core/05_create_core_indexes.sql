@@ -1,0 +1,108 @@
+USE HomeCreditRisk;
+GO
+
+
+CREATE INDEX IX_core_bureau_SK_ID_CURR
+    ON core.bureau(SK_ID_CURR);
+GO
+
+
+CREATE INDEX IX_core_previous_applications_SK_ID_CURR
+    ON core.previous_applications(SK_ID_CURR);
+GO
+
+
+CREATE INDEX IX_core_bureau_balance_STATUS
+    ON core.bureau_balance(STATUS);
+GO
+
+SELECT
+    'pos_cash_balance' AS table_name,
+    COUNT_BIG(*) AS row_count
+FROM core.pos_cash_balance
+
+UNION ALL
+
+SELECT
+    'credit_card_balance',
+    COUNT_BIG(*)
+FROM core.credit_card_balance
+
+UNION ALL
+
+SELECT
+    'installments_payments',
+    COUNT_BIG(*)
+FROM core.installments_payments;
+
+
+SELECT
+    PREVIOUS_APPLICATION_MATCHED,
+    COUNT_BIG(*) AS row_count
+FROM core.pos_cash_balance
+GROUP BY PREVIOUS_APPLICATION_MATCHED
+ORDER BY PREVIOUS_APPLICATION_MATCHED;
+
+
+SELECT
+    PREVIOUS_APPLICATION_MATCHED,
+    COUNT_BIG(*) AS row_count
+FROM core.credit_card_balance
+GROUP BY PREVIOUS_APPLICATION_MATCHED
+ORDER BY PREVIOUS_APPLICATION_MATCHED;
+
+SELECT
+    PREVIOUS_APPLICATION_MATCHED,
+    COUNT_BIG(*) AS row_count
+FROM core.installments_payments
+GROUP BY PREVIOUS_APPLICATION_MATCHED
+ORDER BY PREVIOUS_APPLICATION_MATCHED;
+
+
+SELECT TOP (20)
+    SK_ID_CURR,
+    SK_ID_PREV,
+
+    DAYS_INSTALMENT,
+    DAYS_ENTRY_PAYMENT,
+
+    DAYS_ENTRY_PAYMENT
+        - DAYS_INSTALMENT
+        AS PAYMENT_DELAY_DAYS,
+
+    AMT_INSTALMENT,
+    AMT_PAYMENT
+
+FROM core.installments_payments
+
+WHERE
+    DAYS_INSTALMENT IS NOT NULL
+    AND DAYS_ENTRY_PAYMENT IS NOT NULL
+
+ORDER BY PAYMENT_DELAY_DAYS DESC;
+
+
+SELECT TOP (20)
+    SK_ID_CURR,
+    SK_ID_PREV,
+
+    AMT_INSTALMENT,
+    AMT_PAYMENT,
+
+    AMT_INSTALMENT
+        - AMT_PAYMENT
+        AS PAYMENT_SHORTFALL,
+
+    CASE
+        WHEN AMT_PAYMENT < AMT_INSTALMENT
+            THEN 1
+        ELSE 0
+    END AS UNDERPAYMENT_FLAG
+
+FROM core.installments_payments
+
+WHERE
+    AMT_INSTALMENT IS NOT NULL
+    AND AMT_PAYMENT IS NOT NULL
+
+ORDER BY PAYMENT_SHORTFALL DESC;

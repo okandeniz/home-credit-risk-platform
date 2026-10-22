@@ -1,0 +1,9 @@
+column_name,row_count,null_count,pandas_dtype,min_value,max_value,max_text_length,has_fractional_values,null_pct,is_integer_like
+SK_ID_PREV,10001358,0,int64,1000001.0,2843499.0,0,False,0.0,True
+SK_ID_CURR,10001358,0,int64,100001.0,456255.0,0,False,0.0,True
+MONTHS_BALANCE,10001358,0,int64,-96.0,-1.0,0,False,0.0,True
+CNT_INSTALMENT,10001358,26071,float64,1.0,92.0,0,False,0.26,True
+CNT_INSTALMENT_FUTURE,10001358,26087,float64,0.0,85.0,0,False,0.26,True
+NAME_CONTRACT_STATUS,10001358,0,str,,,21,False,0.0,False
+SK_DPD,10001358,0,int64,0.0,4231.0,0,False,0.0,True
+SK_DPD_DEF,10001358,0,int64,0.0,3595.0,0,False,0.0,True

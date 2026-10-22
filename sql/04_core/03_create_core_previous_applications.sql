@@ -1,0 +1,111 @@
+USE HomeCreditRisk;
+GO
+
+
+DROP TABLE IF EXISTS core.previous_applications;
+GO
+
+
+CREATE TABLE core.previous_applications
+(
+    SK_ID_PREV INT NOT NULL,
+    SK_ID_CURR INT NOT NULL,
+
+    NAME_CONTRACT_TYPE VARCHAR(20) NULL,
+
+    AMT_ANNUITY DECIMAL(19,3) NULL,
+    AMT_APPLICATION DECIMAL(19,3) NULL,
+    AMT_CREDIT DECIMAL(19,3) NULL,
+    AMT_DOWN_PAYMENT DECIMAL(19,3) NULL,
+    AMT_GOODS_PRICE DECIMAL(19,3) NULL,
+
+    NAME_CONTRACT_STATUS VARCHAR(20) NULL,
+
+    DAYS_DECISION INT NULL,
+
+    CNT_PAYMENT FLOAT NULL,
+
+    NAME_CLIENT_TYPE VARCHAR(20) NULL,
+
+    NAME_PORTFOLIO VARCHAR(20) NULL,
+
+    NAME_PRODUCT_TYPE VARCHAR(20) NULL,
+
+    CHANNEL_TYPE VARCHAR(50) NULL,
+
+    NAME_YIELD_GROUP VARCHAR(20) NULL,
+
+    CONSTRAINT PK_core_previous_applications
+        PRIMARY KEY (SK_ID_PREV),
+
+    CONSTRAINT FK_core_previous_applications_customer
+        FOREIGN KEY (SK_ID_CURR)
+        REFERENCES core.applications(SK_ID_CURR)
+);
+GO
+
+INSERT INTO core.previous_applications
+(
+    SK_ID_PREV,
+    SK_ID_CURR,
+    NAME_CONTRACT_TYPE,
+    AMT_ANNUITY,
+    AMT_APPLICATION,
+    AMT_CREDIT,
+    AMT_DOWN_PAYMENT,
+    AMT_GOODS_PRICE,
+    NAME_CONTRACT_STATUS,
+    DAYS_DECISION,
+    CNT_PAYMENT,
+    NAME_CLIENT_TYPE,
+    NAME_PORTFOLIO,
+    NAME_PRODUCT_TYPE,
+    CHANNEL_TYPE,
+    NAME_YIELD_GROUP
+)
+SELECT
+    SK_ID_PREV,
+    SK_ID_CURR,
+    NAME_CONTRACT_TYPE,
+    AMT_ANNUITY,
+    AMT_APPLICATION,
+    AMT_CREDIT,
+    AMT_DOWN_PAYMENT,
+    AMT_GOODS_PRICE,
+    NAME_CONTRACT_STATUS,
+    CAST(DAYS_DECISION AS INT),
+    CNT_PAYMENT,
+    NAME_CLIENT_TYPE,
+    NAME_PORTFOLIO,
+    NAME_PRODUCT_TYPE,
+    CHANNEL_TYPE,
+    NAME_YIELD_GROUP
+FROM raw.previous_application;
+GO
+
+
+SELECT
+    'applications' AS table_name,
+    COUNT_BIG(*) AS row_count
+FROM core.applications
+
+UNION ALL
+
+SELECT
+    'bureau',
+    COUNT_BIG(*)
+FROM core.bureau
+
+UNION ALL
+
+SELECT
+    'bureau_balance',
+    COUNT_BIG(*)
+FROM core.bureau_balance
+
+UNION ALL
+
+SELECT
+    'previous_applications',
+    COUNT_BIG(*)
+FROM core.previous_applications;

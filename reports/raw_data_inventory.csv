@@ -1,0 +1,9 @@
+file_name,description,exists,file_size_mb,row_count,column_count,id_columns
+application_train.csv,Current loan applications with target,True,158.44,307511,122,"SK_ID_CURR, TARGET"
+application_test.csv,Current loan applications without target,True,25.34,48744,121,SK_ID_CURR
+bureau.csv,Customer credit bureau history,True,162.14,1716428,17,"SK_ID_CURR, SK_ID_BUREAU"
+bureau_balance.csv,Monthly bureau credit history,True,358.19,27299925,3,SK_ID_BUREAU
+previous_application.csv,Previous Home Credit applications,True,386.21,1670214,37,"SK_ID_CURR, SK_ID_PREV"
+POS_CASH_balance.csv,Monthly POS and cash loan balances,True,374.51,10001358,8,"SK_ID_CURR, SK_ID_PREV"
+credit_card_balance.csv,Monthly credit card balances,True,404.91,3840312,23,"SK_ID_CURR, SK_ID_PREV"
+installments_payments.csv,Installment payment history,True,689.62,13605401,8,"SK_ID_CURR, SK_ID_PREV"
